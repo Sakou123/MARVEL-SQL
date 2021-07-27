@@ -34,3 +34,30 @@ JOIN acteur ON acteur_film.id_acteur = acteur.id
 WHERE acteur.nom = "Evans"
 ```
 
+## BONUS 5 : Ajouter un film: Iron Man 5 par Michael Bay
+```sql
+INSERT INTO film(titre,realisateur,temps,date)
+VALUES ('Iron Man 5','Michael Bay','123','2023')
+```
+## BONUS 6 : Ajouter un acteur:
+```sql
+INSERT INTO acteur(nom,prenom,date)
+VALUES ('Bettany', 'Paul','1971-05-27')
+```
+## BONUS 7 : Modifier un film: IronMan 5 -> IronMan 6 trompé de numéro
+```sql
+UPDATE film
+SET titre = "Iron Man 5"
+WHERE film.titre = "Iron Man 6"
+```
+## BONUS 8 : Supprimer un acteur: Tuer Paul Bettany
+```sql
+DELETE FROM acteur
+WHERE acteur.nom = "Bettany" AND acteur.prenom = "Paul"
+```
+## BONUS 9 : Afficher les 3 derniers acteurs ajoutés:
+```sql
+SELECT prenom, nom
+FROM acteur
+ORDER BY id DESC LIMIT 3
+```
