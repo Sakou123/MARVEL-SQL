@@ -2,7 +2,7 @@
 
 
 ## REQUETE 1 : (les titres et dates de sorties des films du plus récent au plus ancien)
-```
+```SQL
 SELECT titre, date 
 FROM film
 ORDER BY DATE DESC
