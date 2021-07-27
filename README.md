@@ -1,21 +1,22 @@
 # MARVEL-SQL
 
 
-## REQUETE 1 : 
+## REQUETE 1 : (les titres et dates de sorties des films du plus récent au plus ancien)
 ```
-SELECT * 
+SELECT titre, date 
 FROM film
 ORDER BY DATE DESC
 ```
 
-## REQUETE 2 :
+## REQUETE 2 : (les noms, prénoms et ages des acteurs de plus de 30 ans dans l'ordre alphabétique)
 ```
 SELECT nom,prenom,(year(now())-year(date)) AS Age
 FROM acteur
 WHERE DATE < "1991-01-01"
+ORDER BY nom ASC
 ```
 
-## REQUETE 3 :
+## REQUETE 3 : (la liste des acteurs pour un film donné)
 ```
 SELECT * 
 FROM acteur_film
@@ -24,7 +25,7 @@ JOIN acteur ON acteur_film.id_acteur = acteur.id
 WHERE film.titre = "Avengers"
 ```
 
-## REQUETE 4 :
+## REQUETE 4 : (la liste des films pour un acteur donné)
 ```
 SELECT * 
 FROM acteur_film
