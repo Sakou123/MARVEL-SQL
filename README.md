@@ -36,7 +36,7 @@ WHERE acteur.nom = "Evans"
 
 ## BONUS 5 : Ajouter un film: Iron Man 5 par Michael Bay
 ```sql
-INSERT INTO film(titre,realisateur,temps,date)
+INSERT INTO film(titre,realisateur,duree,date)
 VALUES ('Iron Man 5','Michael Bay','123','2023')
 ```
 ## BONUS 6 : Ajouter un acteur:
