@@ -18,7 +18,7 @@ ORDER BY nom ASC
 
 ## REQUETE 3 : (la liste des acteurs pour un film donné)
 ```SQL
-SELECT * 
+SELECT nom, prenom
 FROM acteur_film
 JOIN film ON acteur_film.id_film = film.id
 JOIN acteur ON acteur_film.id_acteur = acteur.id
@@ -27,7 +27,7 @@ WHERE film.titre = "Avengers"
 
 ## REQUETE 4 : (la liste des films pour un acteur donné)
 ```SQL
-SELECT * 
+SELECT titre 
 FROM acteur_film
 JOIN film ON acteur_film.id_film = film.id
 JOIN acteur ON acteur_film.id_acteur = acteur.id
@@ -47,8 +47,8 @@ VALUES ('Bettany', 'Paul','1971-05-27')
 ## BONUS 7 : Modifier un film: IronMan 5 -> IronMan 6 trompé de numéro
 ```sql
 UPDATE film
-SET titre = "Iron Man 5"
-WHERE film.titre = "Iron Man 6"
+SET titre = "Iron Man 6"
+WHERE film.titre = "Iron Man 5"
 ```
 ## BONUS 8 : Supprimer un acteur: Tuer Paul Bettany
 ```sql
